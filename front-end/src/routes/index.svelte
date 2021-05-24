@@ -29,9 +29,10 @@
 	}
 
 	.header-height {
-		min-height: 48vh;
+		min-height: 54vh;
 		margin-right: 2.5%;
 		width: 100%;
+		padding: 20px;
 	}
 
 	.projects {
@@ -59,6 +60,10 @@
 		width: 60%;
 	}
 
+	.header {
+		padding: 20px;
+	}
+
 	@media (max-width: 1000px) {
 		.icon {
 			display: none;
@@ -78,6 +83,7 @@
 
 		.about-me {
 			width: 100%;
+			
 		}
 
 		.header-height {
@@ -117,7 +123,7 @@
 </svelte:head>
 
 <Container>
-	<section class="header-height">
+	<section class="header-height header">
 		<Card>
 			<div class="header-height">
 				<div class="contacts">
@@ -129,7 +135,7 @@
 					</div>
 				</div>
 				<div class="about-me">
-					<h2>Hello, I am Lukas van den Berk</h2>
+					<h2><b>Hello, I am Lukas van den Berk</b></h2>
 					<h2>And I am a:</h2>
 					<div class="spacing">
 						<AboutMeManager />
