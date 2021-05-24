@@ -2,3 +2,5 @@
 .idea
 .mysql-data
 .env
+mysql-data
+__pycache__

@@ -10,7 +10,7 @@ services:
     ports:
       - "3306:3306"
     networks:
-      - base
+      - bass
     env_file: .env
     volumes:
       - ./mysql-data:/var/lib/mysql
@@ -24,7 +24,7 @@ services:
     command: sh ./startup.sh
     env_file: .env
     networks:
-      - base
+      - bass
     volumes:
       - ./backend:/personal_site_app
       - web-static:/personal_site_app/static
@@ -40,13 +40,13 @@ services:
     command: sh ./startup.sh
     env_file: .env
     networks:
-      - base
+      - bass
     ports:
       - "3000:3000"
     volumes:
       - ./front-end:/front-end/
   nginx:
-    container_name: nginx
+    container_name: nginx-tumtum
     restart: always
     build: nginx
     expose:
@@ -61,10 +61,10 @@ services:
     depends_on:
       - django-app
     networks:
-      - base
+      - bass
 
 networks:
-  base:
+  bass:
 
 volumes:
   web-static:
